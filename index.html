@@ -11,7 +11,6 @@ body{
   background: radial-gradient(circle at top,#0b2a6f,#040b1c);
   color:#eaf2ff;
 }
-/* HEADER */
 header{
   padding:15px;
   text-align:center;
@@ -19,7 +18,6 @@ header{
   font-weight:bold;
   text-shadow:0 0 15px #3fa9ff;
 }
-/* BANNER */
 .banner{
   display:flex;
   gap:15px;
@@ -40,13 +38,6 @@ header{
   text-align:center;
   color:#eaf2ff;
 }
-.banner div img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:18px;
-}
-/* GAME MENU */
 .game-menu{
   display:flex;
   gap:12px;
@@ -62,30 +53,12 @@ header{
   cursor:pointer;
   transition:0.2s;
 }
-.game:hover{
-  transform:scale(1.05);
-}
-.game img{
-  width:60px;
-  margin-bottom:6px;
-}
-.game p{
-  margin:0;
-  font-weight:bold;
-}
-/* SECTION & GRID */
-.section{
-  padding:15px;
-}
-.section h2{
-  margin-bottom:10px;
-  text-shadow:0 0 10px #3fa9ff;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-}
+.game:hover{transform:scale(1.05);}
+.game img{width:60px;margin-bottom:6px;}
+.game p{margin:0;font-weight:bold;}
+.section{padding:15px;}
+.section h2{margin-bottom:10px;text-shadow:0 0 10px #3fa9ff;}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
 .box{
   background:rgba(15,40,90,.7);
   border-radius:18px;
@@ -100,14 +73,8 @@ header{
   border-radius:12px;
   margin-bottom:8px;
 }
-.box p{
-  margin:4px 0;
-  font-size:13px;
-}
-.box .price{
-  font-weight:bold;
-  color:#7ac8ff;
-}
+.box p{margin:4px 0;font-size:13px;}
+.box .price{font-weight:bold;color:#7ac8ff;}
 button.order-btn{
   margin-top:6px;
   width:100%;
@@ -120,10 +87,7 @@ button.order-btn{
   cursor:pointer;
   transition:0.2s;
 }
-button.order-btn:hover{
-  filter:brightness(1.2);
-}
-/* HIDE */
+button.order-btn:hover{filter:brightness(1.2);}
 .hidden{display:none;}
 .menu-buttons{
   display:flex;
@@ -139,83 +103,68 @@ button.order-btn:hover{
   font-weight:bold;
   cursor:pointer;
 }
-.menu-buttons button:hover{
-  filter:brightness(1.2);
-}
+.menu-buttons button:hover{filter:brightness(1.2);}
 </style>
 </head>
 <body>
 
 <header>RAYNEX STORE</header>
 
-<!-- BANNER -->
 <div class="banner">
   <div><img src="banner1.jpg" alt="Banner 1"></div>
   <div><img src="banner2.jpg" alt="Banner 2"></div>
 </div>
 
-<!-- TERLARIS BULAN INI -->
 <div class="section" id="terlaris">
 <h2>🔥 Terlaris Bulan Ini (CDID)</h2>
 <div class="grid">
-  <div class="box"><img src="15m.jpg" alt=""><p>Joki CDID 15M</p><p class="price">20.000</p><button class="order-btn" onclick="orderWA('Joki CDID 15M')">Order</button></div>
-  <div class="box"><img src="20m.jpg" alt=""><p>Joki CDID 20M</p><p class="price">25.000</p><button class="order-btn" onclick="orderWA('Joki CDID 20M')">Order</button></div>
-  <div class="box"><img src="30m.jpg" alt=""><p>Joki CDID 30M</p><p class="price">35.000</p><button class="order-btn" onclick="orderWA('Joki CDID 30M')">Order</button></div>
-  <div class="box"><img src="100m.jpg" alt=""><p>Joki CDID 100M</p><p class="price">105.000</p><button class="order-btn" onclick="orderWA('Joki CDID 100M')">Order</button></div>
+  <div class="box"><img src="15m.jpg"><p>Joki CDID 15M</p><p class="price">20.000</p><button class="order-btn" onclick="orderWA('Joki CDID 15M')">Order</button></div>
+  <div class="box"><img src="20m.jpg"><p>Joki CDID 20M</p><p class="price">25.000</p><button class="order-btn" onclick="orderWA('Joki CDID 20M')">Order</button></div>
+  <div class="box"><img src="30m.jpg"><p>Joki CDID 30M</p><p class="price">35.000</p><button class="order-btn" onclick="orderWA('Joki CDID 30M')">Order</button></div>
+  <div class="box"><img src="100m.jpg"><p>Joki CDID 100M</p><p class="price">105.000</p><button class="order-btn" onclick="orderWA('Joki CDID 100M')">Order</button></div>
 </div>
 </div>
 
-<!-- GAME MENU -->
 <div class="game-menu">
-  <div class="game" onclick="showGameMenu('cdid')">
-    <img src="cdid.jpg" alt="CDID">
-    <p>CDID</p>
-  </div>
-  <div class="game" onclick="showGameMenu('fishit')">
-    <img src="fishit.jpg" alt="Fish IT">
-    <p>FISH IT</p>
-  </div>
-  <div class="game" onclick="showGameMenu('freefire')">
-    <img src="freefire.jpg" alt="Free Fire">
-    <p>FREE FIRE</p>
-  </div>
+  <div class="game" onclick="showGameMenu('cdid')"><img src="cdid.jpg"><p>CDID</p></div>
+  <div class="game" onclick="showGameMenu('fishit')"><img src="fishit.jpg"><p>FISH IT</p></div>
+  <div class="game" onclick="showGameMenu('freefire')"><img src="freefire.jpg"><p>FREE FIRE</p></div>
 </div>
 
-<!-- CDID MENU -->
 <div class="section game-menu-box hidden" id="cdid">
 <div class="menu-buttons">
   <button onclick="showCDIDMenu('joki')">JOKI UANG</button>
   <button onclick="showCDIDMenu('gamepass')">GAMEPASS CDID</button>
 </div>
-
 <div id="cdid-joki" class="grid hidden">
-  <div class="box"><img src="15m.jpg" alt=""><p>Joki CDID 15M + Bonus</p><p class="price">20.000</p><button class="order-btn" onclick="orderWA('Joki CDID 15M')">Order</button></div>
-  <div class="box"><img src="20m.jpg" alt=""><p>Joki CDID 20M + Bonus</p><p class="price">25.000</p><button class="order-btn" onclick="orderWA('Joki CDID 20M')">Order</button></div>
-  <div class="box"><img src="30m.jpg" alt=""><p>Joki CDID 30M + Bonus</p><p class="price">35.000</p><button class="order-btn" onclick="orderWA('Joki CDID 30M')">Order</button></div>
-  <div class="box"><img src="40m.jpg" alt=""><p>Joki CDID 40M + Bonus</p><p class="price">45.000</p><button class="order-btn" onclick="orderWA('Joki CDID 40M')">Order</button></div>
-  <div class="box"><img src="50m.jpg" alt=""><p>Joki CDID 50M + Bonus</p><p class="price">55.000</p><button class="order-btn" onclick="orderWA('Joki CDID 50M')">Order</button></div>
-  <div class="box"><img src="60m.jpg" alt=""><p>Joki CDID 60M + Bonus</p><p class="price">65.000</p><button class="order-btn" onclick="orderWA('Joki CDID 60M')">Order</button></div>
-  <div class="box"><img src="70m.jpg" alt=""><p>Joki CDID 70M + Bonus</p><p class="price">75.000</p><button class="order-btn" onclick="orderWA('Joki CDID 70M')">Order</button></div>
-  <div class="box"><img src="80m.jpg" alt=""><p>Joki CDID 80M + Bonus</p><p class="price">85.000</p><button class="order-btn" onclick="orderWA('Joki CDID 80M')">Order</button></div>
-  <div class="box"><img src="90m.jpg" alt=""><p>Joki CDID 90M + Bonus</p><p class="price">95.000</p><button class="order-btn" onclick="orderWA('Joki CDID 90M')">Order</button></div>
-  <div class="box"><img src="100m.jpg" alt=""><p>Joki CDID 100M + Bonus</p><p class="price">105.000</p><button class="order-btn" onclick="orderWA('Joki CDID 100M')">Order</button></div>
+  <!-- semua joki uang CDID 10 item -->
+  <div class="box"><img src="15m.jpg"><p>Joki CDID 15M + Bonus</p><p class="price">20.000</p><button class="order-btn" onclick="orderWA('Joki CDID 15M')">Order</button></div>
+  <div class="box"><img src="20m.jpg"><p>Joki CDID 20M + Bonus</p><p class="price">25.000</p><button class="order-btn" onclick="orderWA('Joki CDID 20M')">Order</button></div>
+  <div class="box"><img src="30m.jpg"><p>Joki CDID 30M + Bonus</p><p class="price">35.000</p><button class="order-btn" onclick="orderWA('Joki CDID 30M')">Order</button></div>
+  <div class="box"><img src="40m.jpg"><p>Joki CDID 40M + Bonus</p><p class="price">45.000</p><button class="order-btn" onclick="orderWA('Joki CDID 40M')">Order</button></div>
+  <div class="box"><img src="50m.jpg"><p>Joki CDID 50M + Bonus</p><p class="price">55.000</p><button class="order-btn" onclick="orderWA('Joki CDID 50M')">Order</button></div>
+  <div class="box"><img src="60m.jpg"><p>Joki CDID 60M + Bonus</p><p class="price">65.000</p><button class="order-btn" onclick="orderWA('Joki CDID 60M')">Order</button></div>
+  <div class="box"><img src="70m.jpg"><p>Joki CDID 70M + Bonus</p><p class="price">75.000</p><button class="order-btn" onclick="orderWA('Joki CDID 70M')">Order</button></div>
+  <div class="box"><img src="80m.jpg"><p>Joki CDID 80M + Bonus</p><p class="price">85.000</p><button class="order-btn" onclick="orderWA('Joki CDID 80M')">Order</button></div>
+  <div class="box"><img src="90m.jpg"><p>Joki CDID 90M + Bonus</p><p class="price">95.000</p><button class="order-btn" onclick="orderWA('Joki CDID 90M')">Order</button></div>
+  <div class="box"><img src="100m.jpg"><p>Joki CDID 100M + Bonus</p><p class="price">105.000</p><button class="order-btn" onclick="orderWA('Joki CDID 100M')">Order</button></div>
 </div>
 
 <div id="cdid-gamepass" class="grid hidden">
-  <div class="box"><img src="luxurycr.jpg" alt=""><p>Luxury Car</p><p class="price">35.000</p><button class="order-btn" onclick="orderWA('Gamepass Luxury Car CDID')">Order</button></div>
-  <div class="box"><img src="modif.jpg" alt=""><p>Modification Advance</p><p class="price">33.000</p><button class="order-btn" onclick="orderWA('Gamepass Modification Advance CDID')">Order</button></div>
-  <div class="box"><img src="luxuryhs.jpg" alt=""><p>Luxury House</p><p class="price">15.000</p><button class="order-btn" onclick="orderWA('Gamepass Luxury House CDID')">Order</button></div>
-  <div class="box"><img src="rare.jpg" alt=""><p>Rare Import</p><p class="price">25.000</p><button class="order-btn" onclick="orderWA('Gamepass Rare Import CDID')">Order</button></div>
-  <div class="box"><img src="retro.jpg" alt=""><p>Retro Pass</p><p class="price">25.000</p><button class="order-btn" onclick="orderWA('Gamepass Retro Pass CDID')">Order</button></div>
-  <div class="box"><img src="ems.jpg" alt=""><p>Emergency Vehicles</p><p class="price">20.000</p><button class="order-btn" onclick="orderWA('Gamepass Emergency Vehicles CDID')">Order</button></div>
-  <div class="box"><img src="2xp.jpg" alt=""><p>2X Paycheck</p><p class="price">55.000</p><button class="order-btn" onclick="orderWA('Gamepass 2X Paycheck CDID')">Order</button></div>
-  <div class="box"><img src="50%.jpg" alt=""><p>+50% Earning</p><p class="price">55.000</p><button class="order-btn" onclick="orderWA('Gamepass +50% Earning CDID')">Order</button></div>
-  <div class="box"><img src="extra1.jpg" alt=""><p>Ownable Car</p><p class="price">15.000</p><button class="order-btn" onclick="orderWA('Gamepass Ownable Car CDID')">Order</button></div>
-  <div class="box"><img src="extra2.jpg" alt=""><p>2X Ownable Car</p><p class="price">35.000</p><button class="order-btn" onclick="orderWA('Gamepass Ownable Car 2x CDID')">Order</button></div>
+  <!-- semua gamepass CDID 10 item -->
+  <div class="box"><img src="luxurycr.jpg"><p>Luxury Car</p><p class="price">35.000</p><button class="order-btn" onclick="orderWA('Gamepass Luxury Car CDID')">Order</button></div>
+  <div class="box"><img src="modif.jpg"><p>Modification Advance</p><p class="price">33.000</p><button class="order-btn" onclick="orderWA('Gamepass Modification Advance CDID')">Order</button></div>
+  <div class="box"><img src="luxuryhs.jpg"><p>Luxury House</p><p class="price">15.000</p><button class="order-btn" onclick="orderWA('Gamepass Luxury House CDID')">Order</button></div>
+  <div class="box"><img src="rare.jpg"><p>Rare Import</p><p class="price">25.000</p><button class="order-btn" onclick="orderWA('Gamepass Rare Import CDID')">Order</button></div>
+  <div class="box"><img src="retro.jpg"><p>Retro Pass</p><p class="price">25.000</p><button class="order-btn" onclick="orderWA('Gamepass Retro Pass CDID')">Order</button></div>
+  <div class="box"><img src="ems.jpg"><p>Emergency Vehicles</p><p class="price">20.000</p><button class="order-btn" onclick="orderWA('Gamepass Emergency Vehicles CDID')">Order</button></div>
+  <div class="box"><img src="2xp.jpg"><p>2X Paycheck</p><p class="price">55.000</p><button class="order-btn" onclick="orderWA('Gamepass 2X Paycheck CDID')">Order</button></div>
+  <div class="box"><img src="50%.jpg"><p>+50% Earning</p><p class="price">55.000</p><button class="order-btn" onclick="orderWA('Gamepass +50% Earning CDID')">Order</button></div>
+  <div class="box"><img src="extra1.jpg"><p>Ownable Car</p><p class="price">15.000</p><button class="order-btn" onclick="orderWA('Gamepass Ownable Car CDID')">Order</button></div>
+  <div class="box"><img src="extra2.jpg"><p>2X Ownable Car</p><p class="price">35.000</p><button class="order-btn" onclick="orderWA('Gamepass Ownable Car 2x CDID')">Order</button></div>
 </div>
 </div>
 
-<!-- FISH IT MENU -->
 <div class="section game-menu-box hidden" id="fishit">
 <div class="menu-buttons">
   <button onclick="showFishMenu('joki')">JOKI AFK</button>
@@ -223,30 +172,49 @@ button.order-btn:hover{
 </div>
 
 <div id="fish-joki" class="grid hidden">
-  <div class="box"><img src="1jafk.jpg" alt=""><p>Joki AFK 1 Jam</p><p class="price">2.000</p><button class="order-btn" onclick="orderWA('Joki AFK 1 Jam')">Order</button></div>
-  <div class="box"><img src="5jafk.jpg" alt=""><p>Joki AFK 5 Jam</p><p class="price">4.000</p><button class="order-btn" onclick="orderWA('Joki AFK 5 Jam')">Order</button></div>
-  <div class="box"><img src="10jafk.jpg" alt=""><p>Joki AFK 10 Jam</p><p class="price">6.000</p><button class="order-btn" onclick="orderWA('Joki AFK 10 Jam')">Order</button></div>
-  <div class="box"><img src="15jafk.jpg" alt=""><p>Joki AFK 15 Jam</p><p class="price">8.000</p><button class="order-btn" onclick="orderWA('Joki AFK 15 Jam')">Order</button></div>
-  <div class="box"><img src="24jafk.jpg" alt=""><p>Joki AFK 24 Jam</p><p class="price">10.000</p><button class="order-btn" onclick="orderWA('Joki AFK 24 Jam')">Order</button></div>
+  <!-- 5 Joki AFK -->
+  <div class="box"><img src="1jafk.jpg"><p>Joki AFK 1 Jam</p><p class="price">2.000</p><button class="order-btn" onclick="orderWA('Joki AFK 1 Jam')">Order</button></div>
+  <div class="box"><img src="5jafk.jpg"><p>Joki AFK 5 Jam</p><p class="price">4.000</p><button class="order-btn" onclick="orderWA('Joki AFK 5 Jam')">Order</button></div>
+  <div class="box"><img src="10jafk.jpg"><p>Joki AFK 10 Jam</p><p class="price">6.000</p><button class="order-btn" onclick="orderWA('Joki AFK 10 Jam')">Order</button></div>
+  <div class="box"><img src="15jafk.jpg"><p>Joki AFK 15 Jam</p><p class="price">8.000</p><button class="order-btn" onclick="orderWA('Joki AFK 15 Jam')">Order</button></div>
+  <div class="box"><img src="24jafk.jpg"><p>Joki AFK 24 Jam</p><p class="price">10.000</p><button class="order-btn" onclick="orderWA('Joki AFK 24 Jam')">Order</button></div>
 </div>
 
 <div id="fish-uang" class="grid hidden">
-  <div class="box"><img src="1f.jpg" alt=""><p>UANG FISH IT 1M</p><p class="price">6.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 1M')">Order</button></div>
-  <div class="box"><img src="2f.jpg" alt=""><p>UANG FISH IT 2M</p><p class="price">12.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 2M')">Order</button></div>
-  <div class="box"><img src="3f.jpg" alt=""><p>UANG FISH IT 3M</p><p class="price">18.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 3M')">Order</button></div>
-  <div class="box"><img src="4f.jpg" alt=""><p>UANG FISH IT 4M</p><p class="price">22.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 4M')">Order</button></div>
-  <div class="box"><img src="5f.jpg" alt=""><p>UANG FISH IT 5M</p><p class="price">26.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 5M')">Order</button></div>
-  <div class="box"><img src="6f.jpg" alt=""><p>UANG FISH IT 6M</p><p class="price">30.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 6M')">Order</button></div>
-  <div class="box"><img src="7f.jpg" alt=""><p>UANG FISH IT 7M</p><p class="price">34.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 7M')">Order</button></div>
-  <div class="box"><img src="8f.jpg" alt=""><p>UANG FISH IT 8M</p><p class="price">40.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 8M')">Order</button></div>
-  <div class="box"><img src="9f.jpg" alt=""><p>UANG FISH IT 9M</p><p class="price">46.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 9M')">Order</button></div>
-  <div class="box"><img src="10f.jpg" alt=""><p>UANG FISH IT 10M</p><p class="price">50.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 10M')">Order</button></div>
+  <!-- 10 Uang Fish IT -->
+  <div class="box"><img src="1f.jpg"><p>UANG FISH IT 1M</p><p class="price">6.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 1m')">Order</button></div>
+  <div class="box"><img src="2f.jpg"><p>UANG FISH IT 2M</p><p class="price">12.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 2m')">Order</button></div>
+  <div class="box"><img src="3f.jpg"><p>UANG FISH IT 3M</p><p class="price">18.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 3m')">Order</button></div>
+  <div class="box"><img src="4f.jpg"><p>UANG FISH IT 4M</p><p class="price">22.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 4m')">Order</button></div>
+  <div class="box"><img src="5f.jpg"><p>UANG FISH IT 5M</p><p class="price">26.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 5m')">Order</button></div>
+  <div class="box"><img src="6f.jpg"><p>UANG FISH IT 6M</p><p class="price">30.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 6m')">Order</button></div>
+  <div class="box"><img src="7f.jpg"><p>UANG FISH IT 7M</p><p class="price">34.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 7m')">Order</button></div>
+  <div class="box"><img src="8f.jpg"><p>UANG FISH IT 8M</p><p class="price">40.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 8m')">Order</button></div>
+  <div class="box"><img src="9f.jpg"><p>UANG FISH IT 9M</p><p class="price">46.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 9m')">Order</button></div>
+  <div class="box"><img src="10f.jpg"><p>UANG FISH IT 10M</p><p class="price">50.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 10m')">Order</button></div>
 </div>
 </div>
 
-<!-- FREE FIRE MENU -->
 <div class="section game-menu-box hidden" id="freefire">
 <h2>FREE FIRE</h2>
 <div class="grid">
-  <div class="box"><img src="epep.jpg" alt=""><p>📝 TOP UP Epep</p><p class="price">💰 HARGA DI SINI</p><button class="order-btn" onclick="orderWA('TOP UP Epep')">Order</button></div>
-  <div class="box"><img src="epep2.jpg" alt=""><p>📝 TOP UP 2</p><p class="price">💰 HARGA
+  <div class="box"><img src="epep.jpg"><p>📝 TOP UP Epep</p><p class="price">💰 HARGA DI SINI</p><button class="order-btn" onclick="orderWA('TOP UP Epep')">Order</button></div>
+  <div class="box"><img src="epep2.jpg"><p>📝 TOP UP 2</p><p class="price">💰 HARGA DI SINI</p><button class="order-btn" onclick="orderWA('TOP UP 2')">Order</button></div>
+</div>
+</div>
+
+<script>
+let waNumber = "6282198399387"; // ganti nomor WA lo
+
+function showGameMenu(game){
+  document.querySelectorAll('.game-menu-box').forEach(el=>el.classList.add('hidden'));
+  document.getElementById(game).classList.remove('hidden');
+  if(game==='cdid') showCDIDMenu('joki');
+  if(game==='fishit') showFishMenu('joki');
+}
+
+function showCDIDMenu(menu){
+  document.getElementById('cdid-joki').classList.add('hidden');
+  document.getElementById('cdid-gamepass').classList.add('hidden');
+  if(menu==='joki') document.getElementById('cdid-joki').classList.remove('hidden');
+  if(menu==='gamepass') document.getElementById('cd
