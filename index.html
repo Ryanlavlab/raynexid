@@ -76,32 +76,19 @@ header{
 .box p{margin:4px 0;font-size:13px;}
 .box .price{font-weight:bold;color:#7ac8ff;}
 button.order-btn{
-  margin-top:6px;
-  width:100%;
-  padding:8px;
-  border:none;
-  border-radius:10px;
+  margin-top:6px;width:100%;padding:8px;border:none;border-radius:10px;
   background:linear-gradient(90deg,#2f9bff,#7ac8ff);
-  color:#021428;
-  font-weight:bold;
-  cursor:pointer;
-  transition:0.2s;
+  color:#021428;font-weight:bold;cursor:pointer;transition:0.2s;
 }
 button.order-btn:hover{filter:brightness(1.2);}
 .hidden{display:none;}
 .menu-buttons{
-  display:flex;
-  gap:12px;
-  margin-bottom:10px;
+  display:flex;gap:12px;margin-bottom:10px;
 }
 .menu-buttons button{
-  flex:1;
-  padding:10px;
-  border:none;
-  border-radius:12px;
+  flex:1;padding:10px;border:none;border-radius:12px;
   background:linear-gradient(90deg,#2f9bff,#7ac8ff);
-  font-weight:bold;
-  cursor:pointer;
+  font-weight:bold;cursor:pointer;
 }
 .menu-buttons button:hover{filter:brightness(1.2);}
 </style>
@@ -118,26 +105,26 @@ button.order-btn:hover{filter:brightness(1.2);}
 <div class="section" id="terlaris">
 <h2>🔥 Terlaris Bulan Ini (CDID)</h2>
 <div class="grid">
-  <div class="box"><img src="15m.jpg"><p>Joki CDID 15M</p><p class="price">20.000</p><button class="order-btn" onclick="orderWA('Joki CDID 15M')">Order</button></div>
-  <div class="box"><img src="20m.jpg"><p>Joki CDID 20M</p><p class="price">25.000</p><button class="order-btn" onclick="orderWA('Joki CDID 20M')">Order</button></div>
-  <div class="box"><img src="30m.jpg"><p>Joki CDID 30M</p><p class="price">35.000</p><button class="order-btn" onclick="orderWA('Joki CDID 30M')">Order</button></div>
-  <div class="box"><img src="100m.jpg"><p>Joki CDID 100M</p><p class="price">105.000</p><button class="order-btn" onclick="orderWA('Joki CDID 100M')">Order</button></div>
+  <div class="box"><img src="15m.jpg" alt=""><p>Joki CDID 15M</p><p class="price">20.000</p><button class="order-btn" onclick="orderWA('Joki CDID 15M')">Order</button></div>
+  <div class="box"><img src="20m.jpg" alt=""><p>Joki CDID 20M</p><p class="price">25.000</p><button class="order-btn" onclick="orderWA('Joki CDID 20M')">Order</button></div>
+  <div class="box"><img src="30m.jpg" alt=""><p>Joki CDID 30M</p><p class="price">35.000</p><button class="order-btn" onclick="orderWA('Joki CDID 30M')">Order</button></div>
+  <div class="box"><img src="100m.jpg" alt=""><p>Joki CDID 100M</p><p class="price">105.000</p><button class="order-btn" onclick="orderWA('Joki CDID 100M')">Order</button></div>
 </div>
 </div>
 
 <div class="game-menu">
-  <div class="game" onclick="showGameMenu('cdid')"><img src="cdid.jpg"><p>CDID</p></div>
-  <div class="game" onclick="showGameMenu('fishit')"><img src="fishit.jpg"><p>FISH IT</p></div>
-  <div class="game" onclick="showGameMenu('freefire')"><img src="freefire.jpg"><p>FREE FIRE</p></div>
+  <div class="game" onclick="showGameMenu('cdid')"><img src="cdid.jpg" alt=""><p>CDID</p></div>
+  <div class="game" onclick="showGameMenu('fishit')"><img src="fishit.jpg" alt=""><p>FISH IT</p></div>
+  <div class="game" onclick="showGameMenu('freefire')"><img src="freefire.jpg" alt=""><p>FREE FIRE</p></div>
 </div>
 
+<!-- CDID -->
 <div class="section game-menu-box hidden" id="cdid">
 <div class="menu-buttons">
   <button onclick="showCDIDMenu('joki')">JOKI UANG</button>
   <button onclick="showCDIDMenu('gamepass')">GAMEPASS CDID</button>
 </div>
 <div id="cdid-joki" class="grid hidden">
-  <!-- semua joki uang CDID 10 item -->
   <div class="box"><img src="15m.jpg"><p>Joki CDID 15M + Bonus</p><p class="price">20.000</p><button class="order-btn" onclick="orderWA('Joki CDID 15M')">Order</button></div>
   <div class="box"><img src="20m.jpg"><p>Joki CDID 20M + Bonus</p><p class="price">25.000</p><button class="order-btn" onclick="orderWA('Joki CDID 20M')">Order</button></div>
   <div class="box"><img src="30m.jpg"><p>Joki CDID 30M + Bonus</p><p class="price">35.000</p><button class="order-btn" onclick="orderWA('Joki CDID 30M')">Order</button></div>
@@ -149,9 +136,7 @@ button.order-btn:hover{filter:brightness(1.2);}
   <div class="box"><img src="90m.jpg"><p>Joki CDID 90M + Bonus</p><p class="price">95.000</p><button class="order-btn" onclick="orderWA('Joki CDID 90M')">Order</button></div>
   <div class="box"><img src="100m.jpg"><p>Joki CDID 100M + Bonus</p><p class="price">105.000</p><button class="order-btn" onclick="orderWA('Joki CDID 100M')">Order</button></div>
 </div>
-
 <div id="cdid-gamepass" class="grid hidden">
-  <!-- semua gamepass CDID 10 item -->
   <div class="box"><img src="luxurycr.jpg"><p>Luxury Car</p><p class="price">35.000</p><button class="order-btn" onclick="orderWA('Gamepass Luxury Car CDID')">Order</button></div>
   <div class="box"><img src="modif.jpg"><p>Modification Advance</p><p class="price">33.000</p><button class="order-btn" onclick="orderWA('Gamepass Modification Advance CDID')">Order</button></div>
   <div class="box"><img src="luxuryhs.jpg"><p>Luxury House</p><p class="price">15.000</p><button class="order-btn" onclick="orderWA('Gamepass Luxury House CDID')">Order</button></div>
@@ -165,41 +150,38 @@ button.order-btn:hover{filter:brightness(1.2);}
 </div>
 </div>
 
+<!-- FISH IT -->
 <div class="section game-menu-box hidden" id="fishit">
 <div class="menu-buttons">
   <button onclick="showFishMenu('joki')">JOKI AFK</button>
   <button onclick="showFishMenu('uang')">UANG FISH IT</button>
 </div>
-
 <div id="fish-joki" class="grid hidden">
-  <!-- 5 Joki AFK -->
   <div class="box"><img src="1jafk.jpg"><p>Joki AFK 1 Jam</p><p class="price">2.000</p><button class="order-btn" onclick="orderWA('Joki AFK 1 Jam')">Order</button></div>
   <div class="box"><img src="5jafk.jpg"><p>Joki AFK 5 Jam</p><p class="price">4.000</p><button class="order-btn" onclick="orderWA('Joki AFK 5 Jam')">Order</button></div>
   <div class="box"><img src="10jafk.jpg"><p>Joki AFK 10 Jam</p><p class="price">6.000</p><button class="order-btn" onclick="orderWA('Joki AFK 10 Jam')">Order</button></div>
   <div class="box"><img src="15jafk.jpg"><p>Joki AFK 15 Jam</p><p class="price">8.000</p><button class="order-btn" onclick="orderWA('Joki AFK 15 Jam')">Order</button></div>
   <div class="box"><img src="24jafk.jpg"><p>Joki AFK 24 Jam</p><p class="price">10.000</p><button class="order-btn" onclick="orderWA('Joki AFK 24 Jam')">Order</button></div>
 </div>
-
 <div id="fish-uang" class="grid hidden">
-  <!-- 10 Uang Fish IT -->
-  <div class="box"><img src="1f.jpg"><p>UANG FISH IT 1M</p><p class="price">6.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 1m')">Order</button></div>
-  <div class="box"><img src="2f.jpg"><p>UANG FISH IT 2M</p><p class="price">12.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 2m')">Order</button></div>
-  <div class="box"><img src="3f.jpg"><p>UANG FISH IT 3M</p><p class="price">18.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 3m')">Order</button></div>
-  <div class="box"><img src="4f.jpg"><p>UANG FISH IT 4M</p><p class="price">22.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 4m')">Order</button></div>
-  <div class="box"><img src="5f.jpg"><p>UANG FISH IT 5M</p><p class="price">26.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 5m')">Order</button></div>
-  <div class="box"><img src="6f.jpg"><p>UANG FISH IT 6M</p><p class="price">30.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 6m')">Order</button></div>
-  <div class="box"><img src="7f.jpg"><p>UANG FISH IT 7M</p><p class="price">34.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 7m')">Order</button></div>
-  <div class="box"><img src="8f.jpg"><p>UANG FISH IT 8M</p><p class="price">40.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 8m')">Order</button></div>
-  <div class="box"><img src="9f.jpg"><p>UANG FISH IT 9M</p><p class="price">46.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 9m')">Order</button></div>
-  <div class="box"><img src="10f.jpg"><p>UANG FISH IT 10M</p><p class="price">50.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 10m')">Order</button></div>
+  <div class="box"><img src="1f.jpg"><p>UANG FISH IT 1M</p><p class="price">6.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 1M')">Order</button></div>
+  <div class="box"><img src="2f.jpg"><p>UANG FISH IT 2M</p><p class="price">12.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 2M')">Order</button></div>
+  <div class="box"><img src="3f.jpg"><p>UANG FISH IT 3M</p><p class="price">18.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 3M')">Order</button></div>
+  <div class="box"><img src="4f.jpg"><p>UANG FISH IT 4M</p><p class="price">22.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 4M')">Order</button></div>
+  <div class="box"><img src="5f.jpg"><p>UANG FISH IT 5M</p><p class="price">26.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 5M')">Order</button></div>
+  <div class="box"><img src="6f.jpg"><p>UANG FISH IT 6M</p><p class="price">30.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 6M')">Order</button></div>
+  <div class="box"><img src="7f.jpg"><p>UANG FISH IT 7M</p><p class="price">34.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 7M')">Order</button></div>
+  <div class="box"><img src="8f.jpg"><p>UANG FISH IT 8M</p><p class="price">40.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 8M')">Order</button></div>
+  <div class="box"><img src="9f.jpg"><p>UANG FISH IT 9M</p><p class="price">46.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 9M')">Order</button></div>
+  <div class="box"><img src="10f.jpg"><p>UANG FISH IT 10M</p><p class="price">50.000</p><button class="order-btn" onclick="orderWA('UANG FISH IT 10M')">Order</button></div>
 </div>
 </div>
 
+<!-- FREE FIRE -->
 <div class="section game-menu-box hidden" id="freefire">
 <h2>FREE FIRE</h2>
 <div class="grid">
   <div class="box"><img src="epep.jpg"><p>📝 TOP UP Epep</p><p class="price">💰 HARGA DI SINI</p><button class="order-btn" onclick="orderWA('TOP UP Epep')">Order</button></div>
-  <div class="box"><img src="epep2.jpg"><p>📝 TOP UP 2</p><p class="price">💰 HARGA DI SINI</p><button class="order-btn" onclick="orderWA('TOP UP 2')">Order</button></div>
 </div>
 </div>
 
@@ -207,7 +189,7 @@ button.order-btn:hover{filter:brightness(1.2);}
 let waNumber = "6282198399387"; // ganti nomor WA lo
 
 function showGameMenu(game){
-  document.querySelectorAll('.game-menu-box').forEach(el=>el.classList.add('hidden'));
+  document.querySelectorAll('.game-menu-box').forEach(el => el.classList.add('hidden'));
   document.getElementById(game).classList.remove('hidden');
   if(game==='cdid') showCDIDMenu('joki');
   if(game==='fishit') showFishMenu('joki');
@@ -217,4 +199,10 @@ function showCDIDMenu(menu){
   document.getElementById('cdid-joki').classList.add('hidden');
   document.getElementById('cdid-gamepass').classList.add('hidden');
   if(menu==='joki') document.getElementById('cdid-joki').classList.remove('hidden');
-  if(menu==='gamepass') document.getElementById('cd
+  if(menu==='gamepass') document.getElementById('cdid-gamepass').classList.remove('hidden');
+}
+
+function showFishMenu(menu){
+  document.getElementById('fish-joki').classList.add('hidden');
+  document.getElementById('fish-uang').classList.add('hidden');
+  if(menu==='joki') document.getElementById('fish-joki').classList.remove('hidden');
